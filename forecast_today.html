@@ -1,0 +1,1262 @@
+<!DOCTYPE HTML>
+<!--
+Front-End by: Nagalskiy Evgeniy / evgeniy.nagalskiy@gmail.com
+oDesk Profile: https://www.odesk.com/users/~~234408326ef8522e
+-->
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Forecast Today</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+
+<!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-xs-5 col-sm-5 col-md-3 logo_holder">
+                    <a href="#"><img class="img-responsive svg_img" src="images/elements/logo.svg" data-alt-src="images/elements/logo.png" alt="" title="" /></a>
+                </div><!-- logo_holder -->
+
+                <div class="col-xs-7 col-sm-7 col-md-push-6 col-md-3 text-center">
+                    <ul class="nav switchers_holder">
+                        <li>
+                            <div class="btn-group item switcher">
+                                <button class="btn" type="button">Bft</button>
+                                <button class="btn active" type="button">m/s</button>
+                            </div><!-- metrics_switcher -->
+                        </li>
+                        <li>
+                            <div class="btn-group item switcher">
+                                <button class="btn active" type="button">&#176;F</button>
+                                <button class="btn" type="button">&#176;C</button>
+                            </div><!-- metrics_switcher -->
+                        </li>
+                        <li>
+                            <button data-toggle="dropdown" class="dropdown-toggle item lang_switcher" type="button">
+                                <span class="caret"></span>
+                                <span class="flag_holder lang_el"></span>
+                            </button>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="#"><span class="flag_holder lang_gb"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_zh"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_de"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_es"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_fr"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_hr"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_hu"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_it"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_ja"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_pl"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_sr"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_ru"></span></a></li>
+                                <li><a href="#"><span class="flag_holder lang_tr"></span></a></li>
+                            </ul>
+                        </li>
+                    </ul><!-- switchers_holder -->
+                </div>
+
+                <div class="col-xs-12 col-md-pull-3 col-md-6">
+                    <div class="search_field_holder">
+                        <form class="form_search_field" action="">
+                            <div class="typehead_holder">
+                                <input type="text" class="form-control input_search typehead_search" autocomplete="off" name="search" id="search" placeholder="" required="required" />
+                                <button type="button" class="btn custom_btn custom_btn_green btn_search"><span class="hidden-xs">Search</span><i class="visible-xs fontello-search"></i></button>
+                            </div><!-- typehead_holder -->
+                        </form><!-- form_search_field -->
+                    </div><!-- search_field_holder -->
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+
+        <div class="top_menu_holder">
+            <div class="container">
+                <nav class="navbar top_menu_navbar" role="navigation">
+                    <button type="button" class="navbar-toggle collapsed fontello-menu top_menu_toggle" data-toggle="collapse" data-target="#top_menu"></button>
+
+                    <div class="login_box">
+                        <a href="#"><i class="fontello-lock"></i> Log in</a>
+                    </div><!-- login_box -->
+
+                    <div class="clearfix visible-xs"></div>
+
+                    <div class="collapse navbar-collapse top_menu" id="top_menu">
+                        <ul class="navbar-nav top_menu_list">
+                            <li class="active"><a href="#">Home</a></li>
+
+                            <li class="submenu_holder">
+                                <a href="#">Weather</a>
+                                <div class="dropdown-submenu submenu_weather">
+                                    <div class="left_column">
+                                        <h3 class="title">Cities</h3>
+                                        <ul class="list">
+                                            <li><a href="#">Eastern Macedonia and Thrace</a></li>
+                                            <li><a href="#">Attica</a></li>
+                                            <li><a href="#">North Aegean</a></li>
+                                            <li><a href="#">Western Greece</a></li>
+                                            <li><a href="#">Western Macedonia</a></li>
+                                            <li><a href="#">Epirus</a></li>
+                                            <li><a href="#">Thessaly</a></li>
+                                        </ul>
+
+                                        <ul class="list">
+                                            <li><a href="#">Ionian Islands</a></li>
+                                            <li><a href="#">Central Macedonia</a></li>
+                                            <li><a href="#">Crete</a></li>
+                                            <li><a href="#">South Aegean</a></li>
+                                            <li><a href="#">Peloponnese</a></li>
+                                            <li><a href="#">Central Greece</a></li>
+                                        </ul>
+                                    </div><!-- left_column -->
+                                    
+                                    <div class="fluid_column">
+                                        <ul class="list">
+                                            <li><a href="#">Islands</a></li>
+                                            <li><a href="#">Ski</a></li>
+                                            <li><a href="#">Mountains</a></li>
+                                            <li><a href="#">Ports</a></li>
+                                            <li><a href="#">Airports</a></li>
+                                            <li><a href="#">Beaches</a></li>
+                                            <li><a href="#">Stadiums</a></li>
+                                        </ul>
+                                    </div><!-- fluid_column -->
+                                    
+                                </div><!-- submenu-weather -->
+                            </li>
+
+                            <li><a href="#">Forecast</a></li>
+
+                            <li><a href="#">Europe</a></li>
+
+                            <li class="submenu_holder">
+                                <a href="#">Models</a>
+                                <div class="dropdown-submenu submenu_models">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="model_holder">
+                                                <img src="images/temp/plug_map_3.jpg" class="img-responsive" alt="">
+                                            </div>
+                                            <h4 class="model_title"><a href="#">Ευρώπη 27km</a></h4>
+                                        </div>
+
+                                        <div class="col-sm-2">
+                                            <div class="model_holder">
+                                                <img src="images/temp/plug_map_3.jpg" class="img-responsive" alt="">
+                                            </div>
+                                            <h4 class="model_title"><a href="#">Ευρώπη 27km</a></h4>
+                                        </div>
+
+                                        <div class="col-sm-2">
+                                            <div class="model_holder">
+                                                <img src="images/temp/plug_map_3.jpg" class="img-responsive" alt="">
+                                            </div>
+                                            <h4 class="model_title"><a href="#">Ευρώπη 27km</a></h4>
+                                        </div>
+
+                                        <div class="col-sm-2">
+                                            <div class="model_holder">
+                                                <img src="images/temp/plug_map_3.jpg" class="img-responsive" alt="">
+                                            </div>
+                                            <h4 class="model_title"><a href="#">Ευρώπη 27km</a></h4>
+                                        </div>
+
+                                        <div class="col-sm-2">
+                                            <div class="model_holder">
+                                                <img src="images/temp/plug_map_3.jpg" class="img-responsive" alt="">
+                                            </div>
+                                            <h4 class="model_title"><a href="#">Ευρώπη 27km</a></h4>
+                                        </div>
+
+                                        <div class="col-sm-2">
+                                            <div class="model_holder">
+                                                <img src="images/temp/plug_map_3.jpg" class="img-responsive" alt="">
+                                            </div>
+                                            <h4 class="model_title"><a href="#">Ευρώπη 27km</a></h4>
+                                        </div>
+                                    </div>
+                                </div><!-- submenu_models -->
+                            </li>
+
+                            <li><a href="#">Services</a></li>
+                        </ul>
+                    </div><!--header_navigation_menu-->
+                </nav>
+            </div><!-- container -->
+        </div><!-- top_menu_holder -->
+    </header>
+
+
+    <section class="section">
+        <!-- GLOBAL AD -->
+        <a class="ad_global_link" href="#">
+            <span class="part part_left">
+                <img alt="" src="images/elements/ad_e_parking.png"><br>
+                    <span class="ad_text">Χριοτουγεννιάτικη Προσφορά!</span><br>
+                    <span class="ad_text">1 εβδομάδα <strong><br>μόνο €30</strong></span><br>
+                <img alt="" src="images/elements/ad_athens_airport.png">
+            </span><!-- left_part -->
+            <span class="part part_right">
+                <img alt="" src="images/elements/ad_e_parking.png"><br>
+                    <span class="ad_text">Χριοτουγεννιάτικη Προσφορά!</span><br>
+                    <span class="ad_text">1 εβδομάδα <strong><br>μόνο €30</strong></span><br>
+                <img alt="" src="images/elements/ad_athens_airport.png">
+            </span><!-- part_right -->
+        </a>
+
+        <div class="container">
+            <div class="breadcrumbs_holder">
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li class="active">Data</li>
+                </ol>
+            </div><!-- breadcrumbs_holder -->
+
+            <h2 class="forecast_title">Weather Forecast for Athens, Attica</h2>
+
+            <div class="buttons_holder text-center">
+                <button class="custom_btn custom_btn_blue mobile_small">Weather Forecast</button>
+                <button class="custom_btn custom_btn_green mobile_small">Live Conditions</button>
+                <button class="custom_btn custom_btn_green mobile_small">Meteograms</button>
+            </div><!-- buttons_holder -->
+
+            <div class="white_box day_forecast_holder">
+                <div class="col-sm-2 day_or_time_item">
+                    <div class="col-xs-3 col-sm-12 subitem block_day_of_the_week">
+                        <h3 class="day">Monday</h3>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_weather_logo">
+                        <div class="weather_logo_holder">
+                            <div class="weather_logo_ratio_box">
+                                <div class="weather_logo weather_cloudy_moon"></div>
+                            </div><!-- weather_logo_ratio_box -->
+                        </div><!-- weather_logo_holder -->
+                    </div><!-- block_weather_logo -->
+                    <div class="col-xs-3 col-sm-12 subitem block_temperature">
+                        <p class="temperature">-18<span class="degree">&#176;C</span></p>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_precipitations">
+                        <p class="precipitations"><i class="fontello-droplet"></i>523mm</p>
+                    </div>
+                </div><!-- day_or_time_item -->
+
+                <div class="col-sm-2 day_or_time_item">
+                    <div class="col-xs-3 col-sm-12 subitem block_day_of_the_week">
+                        <h3 class="day">Tuesday</h3>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_weather_logo">
+                        <div class="weather_logo_holder">
+                            <div class="weather_logo_ratio_box">
+                                <div class="weather_logo weather_cloudy_sun"></div>
+                            </div><!-- weather_logo_ratio_box -->
+                        </div><!-- weather_logo_holder -->
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_temperature">
+                        <p class="temperature">23<span class="degree">&#176;C</span></p>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_precipitations">
+                        <p class="precipitations"><i class="fontello-droplet"></i>523mm</p>
+                    </div>
+                </div><!-- day_or_time_item -->
+
+                <div class="col-sm-2 day_or_time_item triangle_bottom active">
+                    <div class="col-xs-3 col-sm-12 subitem block_day_of_the_week">
+                        <h3 class="day">Wednesday</h3>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_weather_logo">
+                        <div class="weather_logo_holder">
+                            <div class="weather_logo_ratio_box">
+                                <div class="weather_logo weather_drizzle_moon"></div>
+                            </div><!-- weather_logo_ratio_box -->
+                        </div><!-- weather_logo_holder -->
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_temperature">
+                        <p class="temperature">31<span class="degree">&#176;C</span></p>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_precipitations">
+                        <p class="precipitations"><i class="fontello-droplet"></i>523mm</p>
+                    </div>
+                </div><!-- day_or_time_item -->
+
+                <div class="col-sm-2 day_or_time_item">
+                    <div class="col-xs-3 col-sm-12 subitem block_day_of_the_week">
+                        <h3 class="day">Thursday</h3>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_weather_logo">
+                        <div class="weather_logo_holder">
+                            <div class="weather_logo_ratio_box">
+                                <div class="weather_logo weather_drizzle_sun"></div>
+                            </div><!-- weather_logo_ratio_box -->
+                        </div><!-- weather_logo_holder -->
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_temperature">
+                        <p class="temperature">99<span class="degree">&#176;C</span></p>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_precipitations">
+                        <p class="precipitations"><i class="fontello-droplet"></i>523mm</p>
+                    </div>
+                </div><!-- day_or_time_item -->
+
+                <div class="col-sm-2 day_or_time_item">
+                    <div class="col-xs-3 col-sm-12 subitem block_day_of_the_week">
+                        <h3 class="day">Friday</h3>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_weather_logo">
+                        <div class="weather_logo_holder">
+                            <div class="weather_logo_ratio_box">
+                                <div class="weather_logo weather_fog"></div>
+                            </div><!-- weather_logo_ratio_box -->
+                        </div><!-- weather_logo_holder -->
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_temperature">
+                        <p class="temperature">123<span class="degree">&#176;C</span></p>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_precipitations">
+                        <p class="precipitations"><i class="fontello-droplet"></i>523mm</p>
+                    </div>
+                </div><!-- day_or_time_item -->
+
+                <div class="col-sm-2 day_or_time_item">
+                    <div class="col-xs-3 col-sm-12 subitem block_day_of_the_week">
+                        <h3 class="day">Saturday</h3>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_weather_logo">
+                        <div class="weather_logo_holder">
+                            <div class="weather_logo_ratio_box">
+                                <div class="weather_logo weather_heat_moon"></div>
+                            </div><!-- weather_logo_ratio_box -->
+                        </div><!-- weather_logo_holder -->
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_temperature">
+                        <p class="temperature">-145<span class="degree">&#176;C</span></p>
+                    </div>
+                    <div class="col-xs-3 col-sm-12 subitem block_precipitations">
+                        <p class="precipitations"><i class="fontello-droplet"></i>523mm</p>
+                    </div>
+                </div><!-- day_or_time_item -->
+            </div><!-- day_forecast_holder -->
+        </div><!-- container -->
+    </section><!-- section -->
+
+
+    <section class="section section_hourly_weather">
+        <div class="container">
+            <div class="table-responsive table_holder">
+                <table class="table table_hourly_weather">
+                    <thead>
+                        <tr>
+                            <th>timeframe</th>
+                            <th>forecast</th>
+                            <th>weather</th>
+                            <th>temperature</th>
+                            <th>precipitation</th>
+                            <th>wind</th>
+                            <th>humidity</th>
+                            <th>pressure</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="trigger"><a href="#" data-to="rel_link_1">06:00-09:00</a></td>
+                            <td>
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div data-rel="rel_link_1" class="weather_logo weather_cloudy_sun show"></div>
+                                        <div data-rel="rel_link_2" class="weather_logo weather_cb_moon"></div>
+                                        <div data-rel="rel_link_3" class="weather_logo weather_cb_sun"></div>
+                                        <div data-rel="rel_link_4" class="weather_logo weather_moon_clear_sky"></div>
+                                        <div data-rel="rel_link_5" class="weather_logo weather_sun_clear_sky"></div>
+                                        <div data-rel="rel_link_6" class="weather_logo weather_cloudy_moon"></div>
+                                        <div data-rel="rel_link_7" class="weather_logo weather_drizzle_sun"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">Clear sky 1</span>
+                                <span data-rel="rel_link_2">Clear sky 2</span>
+                                <span data-rel="rel_link_3">Clear sky 3</span>
+                                <span data-rel="rel_link_4">Clear sky 4</span>
+                                <span data-rel="rel_link_5">Clear sky 5</span>
+                                <span data-rel="rel_link_6">Clear sky 6</span>
+                                <span data-rel="rel_link_7">Clear sky 7</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">16.0°C</span>
+                                <span data-rel="rel_link_2">17.0°C</span>
+                                <span data-rel="rel_link_3">19.0°C</span>
+                                <span data-rel="rel_link_4">20.0°C</span>
+                                <span data-rel="rel_link_5">21.0°C</span>
+                                <span data-rel="rel_link_6">22.0°C</span>
+                                <span data-rel="rel_link_7">23.0°C</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1 mm</span>
+                                <span data-rel="rel_link_2">2 mm</span>
+                                <span data-rel="rel_link_3">3 mm</span>
+                                <span data-rel="rel_link_4">4 mm</span>
+                                <span data-rel="rel_link_5">5 mm</span>
+                                <span data-rel="rel_link_6">6 mm</span>
+                                <span data-rel="rel_link_7">7 mm</span>
+                            </td>
+                            <td>
+                                <span class="show">
+                                    <div class="compass_directions direction_nnw"></div>
+                                     <div>NNW 4.2 m/s</div>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1%</span>
+                                <span data-rel="rel_link_2">2%</span>
+                                <span data-rel="rel_link_3">3%</span>
+                                <span data-rel="rel_link_4">4%</span>
+                                <span data-rel="rel_link_5">5%</span>
+                                <span data-rel="rel_link_6">6%</span>
+                                <span data-rel="rel_link_7">7%</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1008mb</span>
+                                <span data-rel="rel_link_2">1009mb</span>
+                                <span data-rel="rel_link_3">1010mb</span>
+                                <span data-rel="rel_link_4">1011mb</span>
+                                <span data-rel="rel_link_5">1012mb</span>
+                                <span data-rel="rel_link_6">1013mb</span>
+                                <span data-rel="rel_link_7">1014mb</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="trigger"><a href="#" data-to="rel_link_2">09:00-12:00</a></td>
+                            <td>
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo_ratio_box">
+                                            <div data-rel="rel_link_1" class="weather_logo weather_cloudy_sun show"></div>
+                                            <div data-rel="rel_link_2" class="weather_logo weather_cb_moon"></div>
+                                            <div data-rel="rel_link_3" class="weather_logo weather_cb_sun"></div>
+                                            <div data-rel="rel_link_4" class="weather_logo weather_moon_clear_sky"></div>
+                                            <div data-rel="rel_link_5" class="weather_logo weather_sun_clear_sky"></div>
+                                            <div data-rel="rel_link_6" class="weather_logo weather_cloudy_moon"></div>
+                                            <div data-rel="rel_link_7" class="weather_logo weather_drizzle_sun"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">Clear sky 1</span>
+                                <span data-rel="rel_link_2">Clear sky 2</span>
+                                <span data-rel="rel_link_3">Clear sky 3</span>
+                                <span data-rel="rel_link_4">Clear sky 4</span>
+                                <span data-rel="rel_link_5">Clear sky 5</span>
+                                <span data-rel="rel_link_6">Clear sky 6</span>
+                                <span data-rel="rel_link_7">Clear sky 7</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">16.0°C</span>
+                                <span data-rel="rel_link_2">17.0°C</span>
+                                <span data-rel="rel_link_3">19.0°C</span>
+                                <span data-rel="rel_link_4">20.0°C</span>
+                                <span data-rel="rel_link_5">21.0°C</span>
+                                <span data-rel="rel_link_6">22.0°C</span>
+                                <span data-rel="rel_link_7">23.0°C</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1 mm</span>
+                                <span data-rel="rel_link_2">2 mm</span>
+                                <span data-rel="rel_link_3">3 mm</span>
+                                <span data-rel="rel_link_4">4 mm</span>
+                                <span data-rel="rel_link_5">5 mm</span>
+                                <span data-rel="rel_link_6">6 mm</span>
+                                <span data-rel="rel_link_7">7 mm</span>
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1%</span>
+                                <span data-rel="rel_link_2">2%</span>
+                                <span data-rel="rel_link_3">3%</span>
+                                <span data-rel="rel_link_4">4%</span>
+                                <span data-rel="rel_link_5">5%</span>
+                                <span data-rel="rel_link_6">6%</span>
+                                <span data-rel="rel_link_7">7%</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1008mb</span>
+                                <span data-rel="rel_link_2">1009mb</span>
+                                <span data-rel="rel_link_3">1010mb</span>
+                                <span data-rel="rel_link_4">1011mb</span>
+                                <span data-rel="rel_link_5">1012mb</span>
+                                <span data-rel="rel_link_6">1013mb</span>
+                                <span data-rel="rel_link_7">1014mb</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="trigger"><a href="#" data-to="rel_link_3">12:00-15:00</a></td>
+                            <td>
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo_ratio_box">
+                                            <div data-rel="rel_link_1" class="weather_logo weather_cloudy_sun show"></div>
+                                            <div data-rel="rel_link_2" class="weather_logo weather_cb_moon"></div>
+                                            <div data-rel="rel_link_3" class="weather_logo weather_cb_sun"></div>
+                                            <div data-rel="rel_link_4" class="weather_logo weather_moon_clear_sky"></div>
+                                            <div data-rel="rel_link_5" class="weather_logo weather_sun_clear_sky"></div>
+                                            <div data-rel="rel_link_6" class="weather_logo weather_cloudy_moon"></div>
+                                            <div data-rel="rel_link_7" class="weather_logo weather_drizzle_sun"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">Clear sky 1</span>
+                                <span data-rel="rel_link_2">Clear sky 2</span>
+                                <span data-rel="rel_link_3">Clear sky 3</span>
+                                <span data-rel="rel_link_4">Clear sky 4</span>
+                                <span data-rel="rel_link_5">Clear sky 5</span>
+                                <span data-rel="rel_link_6">Clear sky 6</span>
+                                <span data-rel="rel_link_7">Clear sky 7</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">16.0°C</span>
+                                <span data-rel="rel_link_2">17.0°C</span>
+                                <span data-rel="rel_link_3">19.0°C</span>
+                                <span data-rel="rel_link_4">20.0°C</span>
+                                <span data-rel="rel_link_5">21.0°C</span>
+                                <span data-rel="rel_link_6">22.0°C</span>
+                                <span data-rel="rel_link_7">23.0°C</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1 mm</span>
+                                <span data-rel="rel_link_2">2 mm</span>
+                                <span data-rel="rel_link_3">3 mm</span>
+                                <span data-rel="rel_link_4">4 mm</span>
+                                <span data-rel="rel_link_5">5 mm</span>
+                                <span data-rel="rel_link_6">6 mm</span>
+                                <span data-rel="rel_link_7">7 mm</span>
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1%</span>
+                                <span data-rel="rel_link_2">2%</span>
+                                <span data-rel="rel_link_3">3%</span>
+                                <span data-rel="rel_link_4">4%</span>
+                                <span data-rel="rel_link_5">5%</span>
+                                <span data-rel="rel_link_6">6%</span>
+                                <span data-rel="rel_link_7">7%</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1008mb</span>
+                                <span data-rel="rel_link_2">1009mb</span>
+                                <span data-rel="rel_link_3">1010mb</span>
+                                <span data-rel="rel_link_4">1011mb</span>
+                                <span data-rel="rel_link_5">1012mb</span>
+                                <span data-rel="rel_link_6">1013mb</span>
+                                <span data-rel="rel_link_7">1014mb</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="trigger"><a href="#" data-to="rel_link_4">15:00-18:00</a></td>
+                            <td>
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo_ratio_box">
+                                            <div data-rel="rel_link_1" class="weather_logo weather_cloudy_sun show"></div>
+                                            <div data-rel="rel_link_2" class="weather_logo weather_cb_moon"></div>
+                                            <div data-rel="rel_link_3" class="weather_logo weather_cb_sun"></div>
+                                            <div data-rel="rel_link_4" class="weather_logo weather_moon_clear_sky"></div>
+                                            <div data-rel="rel_link_5" class="weather_logo weather_sun_clear_sky"></div>
+                                            <div data-rel="rel_link_6" class="weather_logo weather_cloudy_moon"></div>
+                                            <div data-rel="rel_link_7" class="weather_logo weather_drizzle_sun"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">Clear sky 1</span>
+                                <span data-rel="rel_link_2">Clear sky 2</span>
+                                <span data-rel="rel_link_3">Clear sky 3</span>
+                                <span data-rel="rel_link_4">Clear sky 4</span>
+                                <span data-rel="rel_link_5">Clear sky 5</span>
+                                <span data-rel="rel_link_6">Clear sky 6</span>
+                                <span data-rel="rel_link_7">Clear sky 7</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">16.0°C</span>
+                                <span data-rel="rel_link_2">17.0°C</span>
+                                <span data-rel="rel_link_3">19.0°C</span>
+                                <span data-rel="rel_link_4">20.0°C</span>
+                                <span data-rel="rel_link_5">21.0°C</span>
+                                <span data-rel="rel_link_6">22.0°C</span>
+                                <span data-rel="rel_link_7">23.0°C</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1 mm</span>
+                                <span data-rel="rel_link_2">2 mm</span>
+                                <span data-rel="rel_link_3">3 mm</span>
+                                <span data-rel="rel_link_4">4 mm</span>
+                                <span data-rel="rel_link_5">5 mm</span>
+                                <span data-rel="rel_link_6">6 mm</span>
+                                <span data-rel="rel_link_7">7 mm</span>
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1%</span>
+                                <span data-rel="rel_link_2">2%</span>
+                                <span data-rel="rel_link_3">3%</span>
+                                <span data-rel="rel_link_4">4%</span>
+                                <span data-rel="rel_link_5">5%</span>
+                                <span data-rel="rel_link_6">6%</span>
+                                <span data-rel="rel_link_7">7%</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1008mb</span>
+                                <span data-rel="rel_link_2">1009mb</span>
+                                <span data-rel="rel_link_3">1010mb</span>
+                                <span data-rel="rel_link_4">1011mb</span>
+                                <span data-rel="rel_link_5">1012mb</span>
+                                <span data-rel="rel_link_6">1013mb</span>
+                                <span data-rel="rel_link_7">1014mb</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="trigger"><a href="#" data-to="rel_link_5">18:00-21:00</a></td>
+                            <td>
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo_ratio_box">
+                                            <div data-rel="rel_link_1" class="weather_logo weather_cloudy_sun show"></div>
+                                            <div data-rel="rel_link_2" class="weather_logo weather_cb_moon"></div>
+                                            <div data-rel="rel_link_3" class="weather_logo weather_cb_sun"></div>
+                                            <div data-rel="rel_link_4" class="weather_logo weather_moon_clear_sky"></div>
+                                            <div data-rel="rel_link_5" class="weather_logo weather_sun_clear_sky"></div>
+                                            <div data-rel="rel_link_6" class="weather_logo weather_cloudy_moon"></div>
+                                            <div data-rel="rel_link_7" class="weather_logo weather_drizzle_sun"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">Clear sky 1</span>
+                                <span data-rel="rel_link_2">Clear sky 2</span>
+                                <span data-rel="rel_link_3">Clear sky 3</span>
+                                <span data-rel="rel_link_4">Clear sky 4</span>
+                                <span data-rel="rel_link_5">Clear sky 5</span>
+                                <span data-rel="rel_link_6">Clear sky 6</span>
+                                <span data-rel="rel_link_7">Clear sky 7</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">16.0°C</span>
+                                <span data-rel="rel_link_2">17.0°C</span>
+                                <span data-rel="rel_link_3">19.0°C</span>
+                                <span data-rel="rel_link_4">20.0°C</span>
+                                <span data-rel="rel_link_5">21.0°C</span>
+                                <span data-rel="rel_link_6">22.0°C</span>
+                                <span data-rel="rel_link_7">23.0°C</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1 mm</span>
+                                <span data-rel="rel_link_2">2 mm</span>
+                                <span data-rel="rel_link_3">3 mm</span>
+                                <span data-rel="rel_link_4">4 mm</span>
+                                <span data-rel="rel_link_5">5 mm</span>
+                                <span data-rel="rel_link_6">6 mm</span>
+                                <span data-rel="rel_link_7">7 mm</span>
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1%</span>
+                                <span data-rel="rel_link_2">2%</span>
+                                <span data-rel="rel_link_3">3%</span>
+                                <span data-rel="rel_link_4">4%</span>
+                                <span data-rel="rel_link_5">5%</span>
+                                <span data-rel="rel_link_6">6%</span>
+                                <span data-rel="rel_link_7">7%</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1008mb</span>
+                                <span data-rel="rel_link_2">1009mb</span>
+                                <span data-rel="rel_link_3">1010mb</span>
+                                <span data-rel="rel_link_4">1011mb</span>
+                                <span data-rel="rel_link_5">1012mb</span>
+                                <span data-rel="rel_link_6">1013mb</span>
+                                <span data-rel="rel_link_7">1014mb</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="trigger"><a href="#" data-to="rel_link_6">21:00-00:00</a></td>
+                            <td>
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo_ratio_box">
+                                            <div data-rel="rel_link_1" class="weather_logo weather_cloudy_sun show"></div>
+                                            <div data-rel="rel_link_2" class="weather_logo weather_cb_moon"></div>
+                                            <div data-rel="rel_link_3" class="weather_logo weather_cb_sun"></div>
+                                            <div data-rel="rel_link_4" class="weather_logo weather_moon_clear_sky"></div>
+                                            <div data-rel="rel_link_5" class="weather_logo weather_sun_clear_sky"></div>
+                                            <div data-rel="rel_link_6" class="weather_logo weather_cloudy_moon"></div>
+                                            <div data-rel="rel_link_7" class="weather_logo weather_drizzle_sun"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">Clear sky 1</span>
+                                <span data-rel="rel_link_2">Clear sky 2</span>
+                                <span data-rel="rel_link_3">Clear sky 3</span>
+                                <span data-rel="rel_link_4">Clear sky 4</span>
+                                <span data-rel="rel_link_5">Clear sky 5</span>
+                                <span data-rel="rel_link_6">Clear sky 6</span>
+                                <span data-rel="rel_link_7">Clear sky 7</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">16.0°C</span>
+                                <span data-rel="rel_link_2">17.0°C</span>
+                                <span data-rel="rel_link_3">19.0°C</span>
+                                <span data-rel="rel_link_4">20.0°C</span>
+                                <span data-rel="rel_link_5">21.0°C</span>
+                                <span data-rel="rel_link_6">22.0°C</span>
+                                <span data-rel="rel_link_7">23.0°C</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1 mm</span>
+                                <span data-rel="rel_link_2">2 mm</span>
+                                <span data-rel="rel_link_3">3 mm</span>
+                                <span data-rel="rel_link_4">4 mm</span>
+                                <span data-rel="rel_link_5">5 mm</span>
+                                <span data-rel="rel_link_6">6 mm</span>
+                                <span data-rel="rel_link_7">7 mm</span>
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1%</span>
+                                <span data-rel="rel_link_2">2%</span>
+                                <span data-rel="rel_link_3">3%</span>
+                                <span data-rel="rel_link_4">4%</span>
+                                <span data-rel="rel_link_5">5%</span>
+                                <span data-rel="rel_link_6">6%</span>
+                                <span data-rel="rel_link_7">7%</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1008mb</span>
+                                <span data-rel="rel_link_2">1009mb</span>
+                                <span data-rel="rel_link_3">1010mb</span>
+                                <span data-rel="rel_link_4">1011mb</span>
+                                <span data-rel="rel_link_5">1012mb</span>
+                                <span data-rel="rel_link_6">1013mb</span>
+                                <span data-rel="rel_link_7">1014mb</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="trigger"><a href="#" data-to="rel_link_7">00:00-03:00</a></td>
+                            <td>
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo_ratio_box">
+                                            <div data-rel="rel_link_1" class="weather_logo weather_cloudy_sun show"></div>
+                                            <div data-rel="rel_link_2" class="weather_logo weather_cb_moon"></div>
+                                            <div data-rel="rel_link_3" class="weather_logo weather_cb_sun"></div>
+                                            <div data-rel="rel_link_4" class="weather_logo weather_moon_clear_sky"></div>
+                                            <div data-rel="rel_link_5" class="weather_logo weather_sun_clear_sky"></div>
+                                            <div data-rel="rel_link_6" class="weather_logo weather_cloudy_moon"></div>
+                                            <div data-rel="rel_link_7" class="weather_logo weather_drizzle_sun"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">Clear sky 1</span>
+                                <span data-rel="rel_link_2">Clear sky 2</span>
+                                <span data-rel="rel_link_3">Clear sky 3</span>
+                                <span data-rel="rel_link_4">Clear sky 4</span>
+                                <span data-rel="rel_link_5">Clear sky 5</span>
+                                <span data-rel="rel_link_6">Clear sky 6</span>
+                                <span data-rel="rel_link_7">Clear sky 7</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">16.0°C</span>
+                                <span data-rel="rel_link_2">17.0°C</span>
+                                <span data-rel="rel_link_3">19.0°C</span>
+                                <span data-rel="rel_link_4">20.0°C</span>
+                                <span data-rel="rel_link_5">21.0°C</span>
+                                <span data-rel="rel_link_6">22.0°C</span>
+                                <span data-rel="rel_link_7">23.0°C</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1 mm</span>
+                                <span data-rel="rel_link_2">2 mm</span>
+                                <span data-rel="rel_link_3">3 mm</span>
+                                <span data-rel="rel_link_4">4 mm</span>
+                                <span data-rel="rel_link_5">5 mm</span>
+                                <span data-rel="rel_link_6">6 mm</span>
+                                <span data-rel="rel_link_7">7 mm</span>
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1%</span>
+                                <span data-rel="rel_link_2">2%</span>
+                                <span data-rel="rel_link_3">3%</span>
+                                <span data-rel="rel_link_4">4%</span>
+                                <span data-rel="rel_link_5">5%</span>
+                                <span data-rel="rel_link_6">6%</span>
+                                <span data-rel="rel_link_7">7%</span>
+                            </td>
+                            <td>
+                                <span class="show" data-rel="rel_link_1">1008mb</span>
+                                <span data-rel="rel_link_2">1009mb</span>
+                                <span data-rel="rel_link_3">1010mb</span>
+                                <span data-rel="rel_link_4">1011mb</span>
+                                <span data-rel="rel_link_5">1012mb</span>
+                                <span data-rel="rel_link_6">1013mb</span>
+                                <span data-rel="rel_link_7">1014mb</span>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td>Charts</td>
+                            <td></td>
+                            <td></td>
+                            <td>Temperature</td>
+                            <td>Precipitations</td>
+                            <td>Wind</td>
+                            <td>Pressure</td>
+                        </tr>
+                    </tfoot>
+                </table><!-- table_hourly_weather -->
+            </div><!-- table-responsive -->
+        </div><!-- container -->
+    </section><!-- section_hourly_weather -->
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="warning_icons_holder">
+                    <div class="banner_box">
+                        <img src="images/temp/banner_plug.jpg" alt="">
+                    </div><!-- banner_box -->
+
+                    <div class="warning_icons_box">
+                        <div class="inner">
+                            <div class="item_row">
+                                <div class="icon_item item_precipitation">
+                                    <div class="icon_item_inner">
+                                        <i class="fontello-precipitation icon"></i>
+                                    </div><!-- icon_item_inner -->
+                                </div><!-- icon_item -->
+
+                                <div class="icon_item item_umbrella active">
+                                    <div class="icon_item_inner">
+                                        <i class="fontello-umbrella icon"></i>
+                                    </div><!-- icon_item_inner -->
+                                </div><!-- icon_item -->                            
+                            </div><!-- item_row -->
+
+                            <div class="item_row">
+                                <div class="icon_item item_road">
+                                    <div class="icon_item_inner">
+                                        <i class="fontello-road icon"></i>
+                                    </div><!-- icon_item_inner -->
+                                </div><!-- icon_item -->
+
+                                <div class="icon_item item_thermometer active_heat">
+                                    <div class="icon_item_inner">
+                                        <i class="fontello- icon"></i>
+                                    </div><!-- icon_item_inner -->
+                                </div><!-- icon_item -->
+                            </div><!-- item_row -->
+                        </div><!-- inner -->
+                    </div><!-- warning_icons_box -->
+                </div><!-- warning_icons_holder -->
+
+                <div class="banner_holder hidden-xs">
+                    <div class="banner_box_728">
+                        <img src="images/temp/banner_plug_728.jpg" alt="">
+                    </div>
+                </div><!-- banner_holder -->
+
+                <div class="white_box forecasts_holder">
+                    <div class="title_holder">
+                        <h2 class="title"><span>7 day</span> forecast</h2>
+                        <ul class="nav switchers_holder">
+                            <li>
+                                <div class="btn-group item switcher">
+                                    <button class="btn btn_switcher switcher_7_days_forecast active" type="button" data-rel-title="7 day" data-rel-block="#7_days_forecast">7day</button>
+
+                                    <button class="btn btn_switcher switcher_12_days_forecast" type="button" data-rel-title="12 day" data-rel-block="#12_days_forecast">12day</button>
+                                </div><!-- metrics_switcher -->
+                            </li>
+                        </ul><!-- switchers_holder -->
+                    </div><!-- title_holder -->
+
+                    <div class="toggle_data_holder">
+                        <div class="tab_holder active" id="7_days_forecast">
+                            <div class="col-custom-7 item">
+                                <div class="day_and_date_block">
+                                    <span class="month_and_date">September 31</span>
+                                    <span class="day_of_the_week">Monday</span>
+                                </div><!-- day_and_date_block -->
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo weather_cb_moon"></div>
+                                    </div><!-- weather_logo_ratio_box -->
+                                </div><!-- weather_logo_holder -->                  
+                                <span class="weather_status">partially cloudy</span>
+                                <p class="temperature">23<span class="degree">°C</span></p>
+                            </div><!-- item -->
+
+                            <div class="col-custom-7 item">
+                                <div class="day_and_date_block">
+                                    <span class="month_and_date">October 1</span>
+                                    <span class="day_of_the_week">Monday</span>
+                                </div><!-- day_and_date_block -->
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo weather_cb_sun"></div>
+                                    </div><!-- weather_logo_ratio_box -->
+                                </div><!-- weather_logo_holder -->                  
+                                <span class="weather_status">Cloudy</span>
+                                <p class="temperature">23<span class="degree">°C</span></p>
+                            </div><!-- item -->
+
+                            <div class="col-custom-7 item">
+                                <div class="day_and_date_block">
+                                    <span class="month_and_date">October 2</span>
+                                    <span class="day_of_the_week">Monday</span>
+                                </div><!-- day_and_date_block -->
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo weather_clear_moon"></div>
+                                    </div><!-- weather_logo_ratio_box -->
+                                </div><!-- weather_logo_holder -->                  
+                                <span class="weather_status">Heavy rain</span>
+                                <p class="temperature">23<span class="degree">°C</span></p>
+                            </div><!-- item -->
+
+                            <div class="clearfix visible-xs mobile_separator"></div>
+
+                            <div class="col-custom-7 item">
+                                <div class="day_and_date_block">
+                                    <span class="month_and_date">October 3</span>
+                                    <span class="day_of_the_week">Monday</span>
+                                </div><!-- day_and_date_block -->
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo weather_clear_sun"></div>
+                                    </div><!-- weather_logo_ratio_box -->
+                                </div><!-- weather_logo_holder -->                  
+                                <span class="weather_status">Sunny</span>
+                                <p class="temperature">23<span class="degree">°C</span></p>
+                            </div><!-- item -->
+
+                            <div class="col-custom-7 item">
+                                <div class="day_and_date_block">
+                                    <span class="month_and_date">October 4</span>
+                                    <span class="day_of_the_week">Monday</span>
+                                </div><!-- day_and_date_block -->
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo weather_cloudy_moon"></div>
+                                    </div><!-- weather_logo_ratio_box -->
+                                </div><!-- weather_logo_holder -->                  
+                                <span class="weather_status">Light rain</span>
+                                <p class="temperature">23<span class="degree">°C</span></p>
+                            </div><!-- item -->
+
+                            <div class="col-custom-7 item">
+                                <div class="day_and_date_block">
+                                    <span class="month_and_date">October 5</span>
+                                    <span class="day_of_the_week">Monday</span>
+                                </div><!-- day_and_date_block -->
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo weather_cloudy_sun"></div>
+                                    </div><!-- weather_logo_ratio_box -->
+                                </div><!-- weather_logo_holder -->                  
+                                <span class="weather_status">partially cloudy</span>
+                                <p class="temperature">23<span class="degree">°C</span></p>
+                            </div><!-- item -->
+
+                            <div class="clearfix visible-xs mobile_separator"></div>
+
+                            <div class="col-custom-7 item">
+                                <div class="day_and_date_block">
+                                    <span class="month_and_date">October 6</span>
+                                    <span class="day_of_the_week">Monday</span>
+                                </div><!-- day_and_date_block -->
+                                <div class="weather_logo_holder">
+                                    <div class="weather_logo_ratio_box">
+                                        <div class="weather_logo weather_drizzle_moon"></div>
+                                    </div><!-- weather_logo_ratio_box -->
+                                </div><!-- weather_logo_holder -->                  
+                                <span class="weather_status">Mostly Cloudy</span>
+                                <p class="temperature">23<span class="degree">°C</span></p>
+                            </div><!-- item -->
+                        </div><!-- 7_days_forecast -->
+
+                        <div class="tab_holder" id="12_days_forecast">
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_drizzle_sun"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_fog"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_heat_moon"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_heat_sun"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_heavy_rain"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_ice_moon"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_ice_sun"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_light_rain"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_light_snow"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_moderate_rain"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_moderate_snow"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+
+                        <div class="col-sm-4 col-md-2 item">
+                            <div class="day_and_date_block">
+                                <span class="month_and_date">September 31</span>
+                                <span class="day_of_the_week">Monday</span>
+                            </div><!-- day_and_date_block -->
+                            <div class="weather_logo_holder">
+                                <div class="weather_logo_ratio_box">
+                                    <div class="weather_logo weather_moon_partially_clear"></div>
+                                </div><!-- weather_logo_ratio_box -->
+                            </div><!-- weather_logo_holder -->                  
+                            <span class="weather_status">partially cloudy</span>
+                            <p class="temperature">23<span class="degree">°C</span></p>
+                        </div><!-- item -->
+                    </div><!-- 12_days_forecast -->
+                    </div><!-- toggle_data_holder -->
+                </div><!-- forecasts_holder -->
+            </div>
+        </div>
+    </section>
+
+
+    <section class="prefooter">
+        <section class="prefooter_tabs_holder">
+            <div class="container">
+                <button type="button" class="visible-xs prefooter_menu_toggle collapsed fontello-menu" data-toggle="collapse" data-target="#prefooter_tabs_navigation"></button>
+
+                <div class="row">
+                    <div class="collapse navbar-collapse prefooter_tabs_navigation" id="prefooter_tabs_navigation">
+                        <ul class="nav-tabs">
+                            <li class="active"><a href="#prefooter_tab_places" data-toggle="tab"><i class="fontello-location"></i>Places</a></li>
+                            <li><a href="#prefooter_tab_topics" data-toggle="tab"><i class="fontello-star"></i>Topics of Interest</a></li>
+                            <li><a href="#prefooter_tab_current" data-toggle="tab"><i class="fontello-cloud"></i>Current Weather</a></li>
+                            <li><a href="#prefooter_tab_past" data-toggle="tab"><i class="fontello-past"></i>Past Weather</a></li>
+                            <li><a href="#prefooter_tab_learn" data-toggle="tab"><i class="fontello-learn"></i>Learn About Weather</a></li>
+                            <li><a href="#prefooter_tab_free" data-toggle="tab"><i class="fontello-data"></i>Free Data</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- container -->
+        </section><!-- prefooter_tabs_holder -->
+
+        <section class="prefooter_tabs_contents_holder">
+            <div class="container">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="prefooter_tab_places">Places</div>
+                    <div class="tab-pane" id="prefooter_tab_topics">Topics of Interest</div>
+                    <div class="tab-pane" id="prefooter_tab_current">Current Weather</div>
+                    <div class="tab-pane" id="prefooter_tab_past">Past Weather</div>
+                    <div class="tab-pane" id="prefooter_tab_learn">Learn About Weather</div>
+                    <div class="tab-pane" id="prefooter_tab_free">Free Data</div>
+                </div><!-- tab-content -->
+            </div><!-- container -->
+        </section><!-- prefooter_tabs_contents_holder -->
+    </section><!-- prefooter -->
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a href="#" class="logo_link"><img class="img-responsive svg_img" src="images/elements/logo.svg" data-alt-path="images/elements/logo_footer.png" alt="" title="" /></a>
+
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Advertising</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <p class="copyright">Copyright &copy; 2011-<script>document.write(new Date().getFullYear());</script> Goldweather - All rights reserved</p>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/modernizr/2.8.2/modernizr.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/vendors/typeahead.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/handlebarsjs/1.3.0/handlebars.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js"></script>
+    <script src="js/vendors/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+            
+</body>
+
+</html>
